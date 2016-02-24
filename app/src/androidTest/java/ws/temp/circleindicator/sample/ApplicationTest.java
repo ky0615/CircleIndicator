@@ -1,4 +1,4 @@
-package pers.medusa.circleindicator;
+package ws.temp.circleindicator.sample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

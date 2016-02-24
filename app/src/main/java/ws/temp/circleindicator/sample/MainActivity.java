@@ -1,4 +1,4 @@
-package pers.medusa.circleindicator.activity;
+package ws.temp.circleindicator.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
-import pers.medusa.circleindicator.R;
 import ws.temp.circleindicator.widget.CircleIndicator;
 
 import java.util.ArrayList;
