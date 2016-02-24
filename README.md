@@ -2,33 +2,62 @@ CircleIndicator
 ===============
 a lightweight viewpager indicator! 
 
-![inside mode]( https://github.com/THEONE10211024/CircleIndicator/blob/master/demo/inside.gif)    
+![inside mode]( https://github.com/ky0615/CircleIndicator/blob/master/demo/inside.gif)    
 
-![outside mode]( https://github.com/THEONE10211024/CircleIndicator/blob/master/demo/outside.gif)    
+![outside mode]( https://github.com/ky0615/CircleIndicator/blob/master/demo/outside.gif)    
 
-![solo mode]( https://github.com/THEONE10211024/CircleIndicator/blob/master/demo/solo.gif)    
+![solo mode]( https://github.com/ky0615/CircleIndicator/blob/master/demo/solo.gif)    
 
 Usage
 --------
+
+import on gladle:
+
+
+in default build.gradle
+
+```gradle
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "https://ky0615.github.io/maven/" }
+    }
+}
+```
+
+in added app's gradle:
+```gradle
+
+dependencies {
+    compile 'ky0615:android-circle-indicator:1.1.0'
+}
+
+```
+
+
 xml:
+
 ```xml
-	<pers.medusa.circleindicator.widget.CircleIndicator
+	<ws.temp.circleindicator.widget.CircleIndicator
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_centerVertical="true"
         android:id="@+id/indicator"
         CircleIndicator:ci_background="@android:color/white"
-        CircleIndicator:ci_selected_background="0xffe6454a"
+        CircleIndicator:ci_selected_background="@android:color/black"
         CircleIndicator:ci_mode="outside"
         CircleIndicator:ci_gravity="center"
         CircleIndicator:ci_radius="10dp"
         CircleIndicator:ci_margin="5dp"
         />
 ```
+
 java:
+
 ```java
         circleIndicator.setViewPager(viewPager);
 ```
+
 --------
 Notice:the method should be called after ViewPager.setAdapter().    
 
@@ -45,6 +74,7 @@ Notice:the method should be called after ViewPager.setAdapter().
 License
 --------
 ```
+Copyright (C) 2016 Koutarou Yabe
 Copyright (C) 2014 relex
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -59,5 +89,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CircleIndicator-green.svg?style=flat)](https://android-arsenal.com/details/1/2606)
