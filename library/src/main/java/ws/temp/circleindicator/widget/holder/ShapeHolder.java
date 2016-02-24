@@ -1,4 +1,4 @@
-package pers.medusa.circleindicator.widget.holder;
+package ws.temp.circleindicator.widget.holder;
 
 import android.graphics.Paint;
 import android.graphics.RadialGradient;
@@ -10,7 +10,7 @@ import android.graphics.drawable.shapes.Shape;
  * how the shape is drawn.
  */
 public class ShapeHolder {
-    private float x = 0, y = 0;//Ô²µÄx¡¢y×ø±ê
+    private float x = 0, y = 0;
     private ShapeDrawable shape;
     private int color;
     private float alpha = 1f;

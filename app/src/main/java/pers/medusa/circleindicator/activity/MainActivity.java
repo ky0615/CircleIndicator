@@ -1,31 +1,27 @@
 package pers.medusa.circleindicator.activity;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.RectF;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import pers.medusa.circleindicator.R;
+import ws.temp.circleindicator.widget.CircleIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import pers.medusa.circleindicator.R;
-import pers.medusa.circleindicator.widget.CircleIndicator;
-
 
 public class MainActivity extends Activity {
 
     private List<View> viewList;
+
     private ViewPager viewPager;
+
     private CircleIndicator circleIndicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,15 +34,17 @@ public class MainActivity extends Activity {
         circleIndicator = (CircleIndicator) findViewById(R.id.indicator);
         circleIndicator.setViewPager(viewPager);
     }
-    private void initData(){
+
+    private void initData() {
         viewList = new ArrayList<View>();
         Random random = new Random();
-        for(int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             View view = new View(this);
-            view.setBackgroundColor(0xff000000| random.nextInt(0x00ffffff));
+            view.setBackgroundColor(0xff000000 | random.nextInt(0x00ffffff));
             viewList.add(view);
         }
     }
+
     PagerAdapter pagerAdapter = new PagerAdapter() {
 
         @Override

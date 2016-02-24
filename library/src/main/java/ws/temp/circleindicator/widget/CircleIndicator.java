@@ -1,4 +1,4 @@
-package pers.medusa.circleindicator.widget;
+package ws.temp.circleindicator.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,12 +17,9 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import pers.medusa.circleindicator.R;
-import pers.medusa.circleindicator.widget.holder.ShapeHolder;
+import ws.temp.circleindicator.R;
+import ws.temp.circleindicator.widget.holder.ShapeHolder;
 
-/**
- * Created by xiayong on 2015/9/29.
- */
 public class CircleIndicator extends View{
     private ViewPager viewPager;
     private List<ShapeHolder> tabItems;
