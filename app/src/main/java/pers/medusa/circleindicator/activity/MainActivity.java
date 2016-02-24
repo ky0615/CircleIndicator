@@ -18,33 +18,6 @@ public class MainActivity extends Activity {
 
     private List<View> viewList;
 
-    private ViewPager viewPager;
-
-    private CircleIndicator circleIndicator;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        initData();
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(pagerAdapter);
-
-        circleIndicator = (CircleIndicator) findViewById(R.id.indicator);
-        circleIndicator.setViewPager(viewPager);
-    }
-
-    private void initData() {
-        viewList = new ArrayList<View>();
-        Random random = new Random();
-        for (int i = 0; i < 5; i++) {
-            View view = new View(this);
-            view.setBackgroundColor(0xff000000 | random.nextInt(0x00ffffff));
-            viewList.add(view);
-        }
-    }
-
     PagerAdapter pagerAdapter = new PagerAdapter() {
 
         @Override
@@ -86,4 +59,31 @@ public class MainActivity extends Activity {
         }
 
     };
+
+    private ViewPager viewPager;
+
+    private CircleIndicator circleIndicator;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        initData();
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(pagerAdapter);
+
+        circleIndicator = (CircleIndicator) findViewById(R.id.indicator);
+        circleIndicator.setViewPager(viewPager);
+    }
+
+    private void initData() {
+        viewList = new ArrayList<View>();
+        Random random = new Random();
+        for (int i = 0; i < 5; i++) {
+            View view = new View(this);
+            view.setBackgroundColor(0xff000000 | random.nextInt(0x00ffffff));
+            viewList.add(view);
+        }
+    }
 }
